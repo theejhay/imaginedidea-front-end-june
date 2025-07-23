@@ -1,0 +1,30 @@
+.border {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.border-top {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+.border-end {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+.border-bottom {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+.border-start {
+    width: 200px;
+    height: 200px;
+    display: block;
+}

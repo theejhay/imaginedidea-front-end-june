@@ -1,0 +1,61 @@
+.box-shadow{
+    padding: 30px;
+    font-size: 25px;
+    box-shadow: inset -2px 0px 11px 0px grey;
+}
+
+.filter-box {
+    text-align: center;
+    width: 200px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 9px;
+    transition: filter 0.8s;
+}
+
+.blur img {
+    filter: blur(4px);
+}
+
+.brightness img {
+    filter: brightness(150%);
+}
+
+.contrast img {
+    filter: contrast(180%);
+}
+
+.grayscale img {
+    filter: grayscale(100%);
+}
+
+/* invert, sepia, saturate, drop-shadow */
+
+.drop-shadow img {
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+img:hover {
+    filter: none;
+}
+
+
+.all-filter img {
+    filter: 
+        brightness(120%)
+        contrast(150%)
+        grayscale(50%)
+        saturate(200%)
+        invert(10%)
+        sepia(30%)
+}
+
+
+.dummy-text {
+    font-size: large;
+    font-family: "Open Sans";
+}

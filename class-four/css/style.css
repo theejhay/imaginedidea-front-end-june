@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+
+body {
+    margin: 0px;
+    /* background: linear-gradient(skyblue, lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    background-image: url('../images/nature.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#paintMeBlue {
+    color: blue;
+    font-size: 40px;
+}
+
+.paintMePurple {
+    color: purple;
+    font-size: 40px;
+}
+
+/*  Descendant selector: find the tag p provided it is under the parent tag (div) */
+div p {
+    color: darkgoldenrod;
+    font-size: 50px;
+}
+
+/*  Child selector i.e select the tag that immediately follows the parent tag  */
+div>p {
+    color: tomato;
+    font-size: 50px;
+}
+
+/*  Attribute Selector  */
+
+input[type="text"] {
+    color: red;
+    font-size: 19px;
+}
+
+/* Absolute Length Units: px, pt, in, cm, mm,  */
+/* Relative Length Units: em, rem, vw, vh , %,   */
+.text-style {
+    font-family: Arial;
+    color: rgb(200, 200, 0);
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration : line-through;
+}
+
+.border-box {
+    /* border-style:solid;
+    border-width: 2px;
+    border-color: cadetblue;
+     */
+    /* padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px; */
+
+    /*  Box model i.e Top Right Bottom Left  */
+    padding: 20px 0px 20px 30px;
+    margin-top: 0px;
+    border: 2px solid cadetblue;
+    border-radius: 20px;
+}
+
+/* Absolute */
+/* .box {
+    width: 500px;
+    font-size: 16px;
+} */
+
+/* Relative */
+
+/* .box {
+    width: 70%;
+    font-size: 1.5em;
+} */
+
+
+/*  
+Background in CSS
+*/
+
+.container {
+    text-align: center;
+    margin-top: 250px;
+    color: white;
+}
+
+.sub-heading {
+    font-size: larger;
+    word-spacing: 3px;
+    line-height: 25px;
+}
+

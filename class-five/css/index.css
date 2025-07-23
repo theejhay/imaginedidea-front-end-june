@@ -1,0 +1,164 @@
+.shadow {
+    margin: 40px;
+    width: 200px;
+    padding: 10px;
+    /* box-shadow: h-offset v-offset blur spread(optional) color ; */
+    box-shadow: 4px 10px 10px gray;
+}
+
+.shadow p {
+    font-size: 30px;
+    text-shadow: 4px 4px 5px red;
+    color: white;
+}
+
+/* a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+a:hover {
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+
+a:active {
+    color: yellow;
+    background-color: rgb(3, 62, 107);
+} */
+
+/* a:visited {
+   color: white;
+   background-color: red; 
+} */
+
+/*  nth-child : even, odd, 1-n, number(n) e.g 2n, 3n, 5n, e.t.c */
+/* li:nth-child(2n + 1) {
+    background-color: rgb(240, 240, 240);
+} */
+
+button {
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: blueviolet;
+    border: 0;
+    margin-left: 20px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+
+button:hover {
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(95, 7, 177);
+    border: 0;
+    cursor: pointer;
+    width: 150px;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/* 
++ = Adjacent Sibling Selector
+~ = General Sibling Selector
+*/
+input:checked + label {
+    color: green;
+    font-weight: bold;
+}
+
+/* .box {
+    display: none;
+} */
+
+#toggle:checked ~ .box {
+    display: block;
+    background-color: aqua;
+    padding: 10px;
+}
+
+.nav ul {
+    display: inline;
+}
+
+.nav li{
+    display: inline;
+    list-style: none;
+    margin: 10px;
+}
+
+.nav li a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: lightgray;
+    color: black;
+    border-radius: 4px;
+}
+
+.nav li a:hover {
+background-color: darkblue;
+color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid div {
+    background: lightblue;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    /* gap: 10px; */
+    background: #EEE;
+    flex-direction: column;   /* value can be : row (default) or column*/
+    /* justify-content: space-around; use when using flex-direction: row*/
+    align-items:start;  /*use when using flex-direction: column*/
+    flex-wrap: wrap;
+}
+
+.flex-container div {
+    padding: 20px;
+    background: lightblue;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background: tomato;
+}
+
+p {
+    clear: both;
+}
+
+.container {
+    width: 300px;
+    height: auto;
+    /* box-shadow: 4px 4px 10px grey; */
+    padding: 20px;
+    border-radius: 20px;
+    float: right;
+}

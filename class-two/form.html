@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> HTML Form </title>
+</head>
+<body>
+
+    <!-- Method: GET, POST 
+    Attributes for Input type Text - disabled, value, required , minlength="3" maxlength="10", readonly
+    autofocus, autocomplete="off"
+    Input types:
+        text, email, number, radio, color, submit, reset, checkbox
+    -->
+    <form action="thank_you.html" method="POST">
+
+        <label for="first_name"> First Name *  </label>
+       <input type="text" placeholder="first name" required name="first_name" id="first_name" /> <br/>
+
+       <label for="last_name"> Last Name *</label>
+       <input type="text" placeholder="last name" name="last_name" /><br/>
+
+       <label for="password"> Password </label>
+       <input type="password" placeholder="password" /><br/>
+
+       <label for="email"> Email </label>
+       <input type="email" placeholder="email" maxlength="10" required name="email_address"> <br/>
+
+       <label for="age"> Age *</label>
+       <input type="number" placeholder="age" name="age" /><br/>
+
+       <label for="gender"> Gender *</label>
+       <input type="radio" name="gender" value="Male" />
+       <label for="male"> Male </label>
+
+       <input type="radio" name="gender" value="Female" />
+       <label for="female">Female</label>
+
+       <input type="radio" name="gender" value="Trans" />
+       <label for="trans">Trans</label>
+       <br />
+
+       <label for="color"> Select Your Favourite Color</label>
+       <input type="color" name="color"> <br />
+
+       <label for="terms"> Terms and Conditions</label>
+       <input type="checkbox" name="terms" required /> <br/>
+
+       <label for="course"> Select your Course</label>
+       <select name="course">
+        <option> -- select --</option>
+        <option value="front_end"> Front End</option>
+        <option value="backend"> Back End</option>
+       </select> <br/>
+
+       <input type="date" name="dob" min="2000-01-01" max="2010-10-01"> <br/>
+       <input type="time" name="datetime" id=""><br/>
+
+       <label for="volume"> Volume </label>
+       <input type="range" name="volume" min="0" max="100" step="1" value="50">
+
+       <input type="submit" value="Submit">
+       <input type="reset" value="Reset">
+    </form>
+
+</body>
+</html>

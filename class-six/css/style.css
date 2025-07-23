@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+}
+
+.background {
+    background-image: url(../images/image.png);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.background-overlay {
+    width: 100%;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.big-text {
+    text-align: center;
+    font-family: Arial;
+    font-weight: bolder;
+    color: white;
+    padding-top: 150px;
+    font-size: 56px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: red;
+}
+
+.btn a:hover {
+    opacity: 0.3;
+    background-color: black;
+    color: purple;
+    border: 1px solid purple;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.text {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    color: white;
+    font-size: 18px;
+}
+
+.lorem {
+    margin-top: 60px;
+    color: red;
+}
+
+@media (max-width: 430px) {
+
+    .lorem {
+        color: green;
+        margin-top: 60px;
+        font-size: large;
+        padding: 20px;
+        border: 1px solid grey;
+        border-radius: 20px;
+    }
+
+    .big-text {
+        text-align: center;
+        font-family: Arial;
+        font-weight: bolder;
+        color: white;
+        padding-top: 100px;
+        font-size: 25px;
+    }
+
+}
+
+@media (min-width: 700px){
+        .lorem {
+        color: blue;
+        margin-top: 60px;
+        font-size: large;
+    }
+}
+

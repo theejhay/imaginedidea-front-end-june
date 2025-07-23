@@ -1,0 +1,71 @@
+
+
+.fade-in {
+    background: lightgreen;
+    padding: 20px;
+    /* animation: fadeIn 3s ease-in forwards; */
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; } /* Start*/
+    to { opacity: 1; background: rgb(7, 110, 57);} /* end*/
+}
+
+.bounce {
+    background: orange;
+    padding: 20px;
+    animation: bounce 1s infinite ease-in-out ;
+}
+
+@keyframes bounce {
+    0% {transform: translateY(0);}
+    50% { transform: translateY(-30px);}
+    100% {transform: translateY(0);}
+}
+
+
+.box {
+    background: rgb(159, 10, 233);
+    border: 4px solid;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    font-size: 225px;
+    color: white;
+
+    /* transform: translateX(50px);
+    transform: translateY(50px); */
+    /* transform: translate(50px, 50px); */
+    /* transform: rotateX(180deg);
+    transform: rotateY(180deg);
+    transform: rotateZ(180deg); */
+
+    /* transform: scaleX(2);
+    transform: scaleY(2); */
+
+    /* transform: scale(2,2); */
+
+    /* transform: skewX(45deg);
+    transform: skewY(45deg); */
+
+    /* transform: skew(20deg, 20deg); */
+
+    transform: matrix(2, 0, 0, 2, 50, 50);
+    /* 
+    scaleX
+    skewY
+    skewX
+    scaleY
+    translateX
+    translateY
+    */
+
+}
+
+

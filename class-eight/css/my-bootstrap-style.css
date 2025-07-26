@@ -1,0 +1,29 @@
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding: 20px
+}
+
+.navbar .nav-link {
+    padding: 12px 20px; /* top-bottom: 12px, left-right: 20px*/
+}
+
+
+.colorRed {
+    color: red;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.font-size-10 {
+    font-size: 10;
+}
+
+.bolder {
+    font-weight: bolder;
+}

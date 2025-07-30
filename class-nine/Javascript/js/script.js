@@ -114,3 +114,5 @@ console.log(typeof value); // null
 let data = 5;
 data = true;
 data = { name: "Alice" };
+
+// Dynamic Typing 

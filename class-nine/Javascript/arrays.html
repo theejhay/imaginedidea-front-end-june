@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Arrays</title>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // Arrays in JavaScript
+        // An array is a collection of items stored at contiguous memory locations.
+        // It is a data structure that can hold multiple values in a single variable.
+
+        let name = "Taiwo";
+
+        // Top - 10
+        // Left - 20
+        // Right - 20
+        // Bottom - 10
+
+        // Arrays starts from index Zero (0)
+
+        let fruits = ["apple", "banana", "orange", "grape", "kiwi", "mango", "peach", "pear", "plum", "pineapple"];
+        let length = fruits.length;
+
+        // IndexOf
+        // indexOf(searchElement, fromIndex)
+        let index = fruits.indexOf("peach", 7);
+        //console.log(index);
+
+        // LastIndexOf
+        // lastIndexOf(searchElement, fromIndex)
+        let lastIndex = fruits.lastIndexOf("kiwi", 4);
+        console.log(lastIndex);
+
+        // push -  Add to End of an array
+        fruits.push("strawberry");
+        // pop - Remove from End of an array
+        fruits.pop();
+
+        // unshift - Add to Beginning of an array
+        fruits.unshift("blueberry");
+
+        // shift - Remove from Beginning of an array
+        fruits.shift();
+
+        // includes - Check if an item exists in an array
+        let hasMango = fruits.includes("Mango");
+        let fruit_fav = "Mango";
+        console.log(fruit_fav.toLowerCase());
+        console.log(fruit_fav.toUpperCase());
+        console.log(hasMango);
+
+        console.log(fruits);
+
+        let tags = ["html", "css", "javascript", "react", "nodejs"];
+        let hashtags = tags.join(' #');
+        console.log("#" + hashtags);
+
+
+        console.log(fruits);
+        // Slice - Extract a section of an array
+        let slicedFruits = fruits.slice(4, 8); // Extracts from index 1 to index 4 (not inclusive)
+        console.log(slicedFruits);
+
+        // splice - Change the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+        // splice(startIndex, deleteCount, item1, item2, ...)
+
+        let products = ["laptop", "phone", "tablet", "watch", "camera"];
+        products.splice(2, 2, "smartwatch", "earbuds"); // Removes§ 1 item at index 2 and adds "smartwatch" and "earbuds"
+        products[1] = "phone-apple"; // Change the value at index 2
+        console.log(products);
+
+        let products2 = ["laptop", "phone", "tablet", "watch", "camera" , 4, 5, 6, true, false, null, undefined];
+
+
+
+
+
+
+        
+    </script>
+
+</body>
+
+</html>

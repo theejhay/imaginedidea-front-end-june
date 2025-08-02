@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Intro | Objects</title>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <script>
+        console.log("Hello World")
+
+        // comment
+        /*
+            Hello Comment 
+        
+        */
+
+        //. Variables 
+        // let, var, const
+        // ES6 - ECMAScript 6
+        // LET and CONST (Block-Scoped Variable)
+        // var (Function Scoped)
+        // Before ES6 we use --var--
+
+        // let - changeable 
+        // const - unchangeable
+
+        // nReserved Keywords - if, let, else, switch
+
+        let my_name = "Taiwo";
+
+        console.log(my_name);
+
+        const city = "Lagos";
+        console.log(city);
+
+        console.log("My name is " + my_name + " and " + my_name + " is from Lagos State");
+
+        //  Template Literals
+        console.log(`My name is ${my_name} and ${my_name} is from Lagos State`);
+
+
+        // Data Types 
+        // Primitive Types (Value Types): They store single values and are copied by value
+        //e.g String "", Number , Boolean true/false, undefined, null
+
+        // Reference Types (Objects, Arrays, Function)
+        let name = "Taiwo"; // String 
+        let age = 35; // Number
+        let isStudent = true; // Boolean
+        let address; // undefined
+        let my_job = null; // null
+
+        console.log(age);
+
+        // Reference Types
+        // Objects {}
+        // Arrays []
+
+        let person = {
+            name: "Taiwo",
+            age: 35,
+            isStudent: true,
+            address: "248 Liverpool Street, Yaba, Lagos",
+            city: "Lagos",
+            children: {
+                name: "Johnny Junior",
+                age: 10
+            }
+        }
+
+        console.log(person.age);
+
+        // DOT Notations
+        console.log(person.isStudent);
+        // Bracket Notations
+        console.log(person["address"]);
+
+        // Modifying Objects 
+
+        // Add another Property to the Object 
+        person.gender = "Male";
+        person.country = "United States of America"
+
+        console.log(person.country);
+
+        // Change a value 
+        person.age = 40;
+
+        console.log(person.age)
+
+        // Delete a property 
+        delete person.age;
+
+        console.log(person.children.age);
+
+        // Object Methods 
+        let keys = Object.keys(person);
+        let values = Object.values(person);
+        let entries = Object.entries(person);
+        console.log(entries);
+
+        let validateName = Object.hasOwnProperty("name");
+
+        console.log(validateName);
+
+        // Javascript is dynamically typed,
+        // you can use typeof to check the data type of a variable
+
+        let xx = 10;
+        console.log(typeof xx);// Number
+
+        xx = "hello";
+        console.log(typeof xx); // String
+
+        let value;
+        console.log(typeof value); // undefined
+
+        value = null;
+        console.log(typeof value); // null
+
+        // What is wrong with this code ?
+        let data = 5;
+        data = true;
+        data = { name: "Alice" };
+
+        let x = 5;
+        let y = 10;
+
+
+        console.log(x);
+
+        let a = { value: 10 };
+
+
+        let b = a;
+
+
+        b.value = 20;
+
+        let z = a;
+        z.value = 30;
+
+        console.log(a);
+
+        let copiedObject = Object.assign({}, a);
+        copiedObject.value = 40;
+
+        console.log('Copied Object', copiedObject);
+        console.log('Object a', a);
+
+        // Merge Objects
+        let personalInfo = {
+            name: "Taiwo",
+            age: 35,
+            isStudent: true,
+            color: "red",
+            address: "248 Liverpool Street, Yaba, Lagos",
+            city: "Lagos"
+        };
+
+        let contactInfo = {
+            email: "john@example.com",
+            phone: "123-456-7890",
+            color: "blue"
+        }
+
+        let fullProfile = Object.assign({}, personalInfo, contactInfo);
+
+        console.log(fullProfile);
+
+
+
+        // Object.assign() - Merges the properties of two or more objects into a target object
+        // Object.assign(target, ...sources)
+
+        /*
+            Copy this object using Object.assign():
+
+            let book = {
+            title: "JavaScript for Beginners",
+            pages: 300
+            };
+
+            // Make a copy and change title to "Advanced JavaScript"
+
+            2. Merge these two objects into one:
+
+            let user = { name: "Alice" };
+            let job = { role: "Developer" };
+
+            // Combine into a new object called `employee`
+        */
+        let book = {
+            title: "JavaScript for Beginners",
+            pages: 300
+        };
+
+        let bookCopy = Object.assign({}, book);
+        bookCopy.title = "Advanced JavaScript";
+
+        console.log('Book Copy', bookCopy);
+        console.log('Book ', book);
+
+        let user = { name: "Alice" };
+        let job = { role: "Developer" };
+
+        let employee = Object.assign({}, user, job);
+
+        console.log(`Employee ${JSON.stringify(employee)}` );
+        console.log("Employee:", employee);
+
+        const personDetails = {
+            name: "Taiwo",
+            age: 35,
+            isStudent: true,
+            address: "248 Liverpool Street, Yaba, Lagos",
+            city: "Lagos"
+        };
+
+        personDetails.name = "John";
+        personDetails.age = 30;
+
+        console.log("Personal: ", personDetails)
+
+        const my_age = "Taiwo";
+        my_age = 40; // This will throw an error because my_age is a constant
+
+        
+
+    </script>
+
+</body>
+
+</html>

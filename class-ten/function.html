@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // Function declaration  (named function)
+        // Function expression (Anonymous function)
+        // Arrow Function  (=>)
+
+        // Function declaration
+
+        function greetOne(name) {
+            console.log("Hello " + name + "!");
+        }
+
+         greetOne("John");
+
+        // Anonymous function
+        const pi = 3.142;
+        const greet = function (name) {
+            console.log("Hello " + name + "!");
+        }
+
+        greet("Taiwo");
+
+        // Arrow Function 
+        // Introduced in ES6
+        // ES6 (ECMAScript 2015) is the 6th version of JS (2015)
+
+        const greetMe = (name) => console.log("Hello " + name + "!");
+
+        greetMe("Opeyemi");
+
+
+
+        // Task : I want you to print out 3 of your friend's name "Hello (friend_name) !"
+        // Hello John 
+        // Hello Mike
+        // Hello Gina 
+
+        // console.log("Hello John");
+        // console.log("Hello Mike");
+        // console.log("Hello Gina");
+
+        sayHello();
+
+        // const sayHello = function () {
+        //     console.log("Hello");
+        // }
+
+        function sayHello(){
+            console.log("Hello");
+        }
+
+        //const sayHello = () => console.log("Hello");
+
+        //Arrow Function and Anonymous function can not be used before declaration
+        // Function Declaration can be used before and after declaration
+  
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+
+<body>
+    <script>
+        let age = "5";
+
+        if (age >= 60) {
+            console.log("You're a senior citizen");
+        }
+        else if (age >= 18) {
+            console.log("You are an adult");
+        }
+        else if (age == 5) {
+            console.log("You're Five ! ");
+        }
+        else {
+            console.log("You are a minor");
+        }
+
+        // let maggi = "Nothing";
+
+        // if (maggi == "Star"){
+        //     console.log("I'll buy Maggi Star");
+        // }
+        // else if( maggi == "Known"){
+        //     console.log("I'll buy Maggi Known");
+        // }
+        // else if (maggi == "Ajinomoto") {
+        //     console.log("I'll buy Maggi Ajinomoto");
+        // } else {
+        //     console.log("Go back home");
+        // }
+
+        // Task : Write a program that checks if a number is positive or negative or zero (Hint: Use if, else if, and else statements and use either greater than or less than operators)
+
+
+
+        let num = 5;
+
+        if (num > 0) {
+            console.log("Positive number");
+        } else if (num < 0) {
+            console.log("Negative number");
+        } else {
+            console.log("Zero");
+        }
+
+        /*
+        Logic gates 
+        AND (&&) : Both conditions must be true
+        OR (||) : At least one condition must be true
+        NOT (!) : Negates the condition
+        Example:
+        AND Logic
+        True && True = True
+        True && False = False
+        False && True = False
+        False && False = False
+
+        OR Logic
+        True || True = True
+        True || False = True
+        False || True = True
+        False || False = False  
+
+        NOT Logic
+        !True = False
+        !False = True   
+
+
+        */
+
+        // 24 hours clock - 00 - 23
+        // between 0 - 11 - Good Morning
+        // between 12 - 17 - Good Afternoon
+        // between 18 - 23 - Good Evening
+
+        let hour = 40;
+
+        if (hour >= 0 && hour < 12) {
+            console.log("Good Morning");
+        } else if (hour >= 12 && hour < 18) {
+            console.log("Good Afternoon");
+        } else if (hour >= 18 && hour < 24) {
+            console.log("Good Evening");
+        } else {
+            console.log("Invalid hour");
+        }
+
+        //  Switch Statement
+        // Switch statement is used to execute one block of code among many options
+        let day = 2;
+
+        switch (day) {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednesday");
+                break;
+            case 4:
+                console.log("Thursday");
+                break;
+            case 5:
+                console.log("Friday");
+                break;
+            case 6:
+                console.log("Saturday");
+                break;
+            case 7:
+                console.log("Sunday");
+                break;
+            default:
+                console.log("Invalid day");
+        }
+
+
+        let light = "blue";
+
+        switch (light) {
+            case "red": 
+                console.log("Stop");
+                break;
+            case "yellow":
+                console.log("Get ready");
+                break;
+            case "green":
+                console.log("Go");
+                break;
+            default:
+                console.log("Invalid traffic light color");   
+        }
+
+        //  Ternary Operator
+        // Syntax: condition ? expression_if_true : expression_if_false;
+        let hourNow = 15;
+        let greeting = (hourNow < 12) ? "Good Morning" : "Good Evening";
+        console.log(greeting);  
+
+        let number = 5;
+        // console.log(number % 2);// 10/2 = 5 Remainder 0  
+
+        if (number % 2 === 0) {
+            console.log("Even number");
+        } else {
+            console.log("Odd number");
+        }
+
+        
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+
+    <script>
+        // Loops
+        // For Loop
+        // While Loop
+        // Do While Loop
+        // For in Loop - {To Loop through objects}
+        // For of Loop - [To Loop through arrays]
+
+        // FOr Loop 
+        // for (initialization; condition; increment/decrement) {
+        //     // code to be executed
+        // }
+
+        for (let i = 1; i <= 10; i++){ 
+            if (i === 7){
+                console.log("Skipping 7");
+                continue; // Exits the loop when i is 3
+            }
+            console.log(i);
+        }
+
+        console.log("!-----------------!-----------------!");
+        // Program to skip even numbers
+        for (let y = 1; y <=10; y++) {
+            if (y % 2 === 0) {
+                continue; // Skip even numbers
+            }
+
+            console.log(y);
+        }
+
+        // Multiplication Table 5
+        console.log("!-----------------!-----------------!");
+        let number = 5;
+        for (let i = 1; i <= 12; i++) {
+            console.log(`${number} * ${i} = ${number * i}`);
+        }
+
+        // First Iteration 
+        // i = 1
+        // i <= 3 (true)
+        // console.log(1);
+        // i++ (i = 2)
+
+        // Second Iteration
+        // i = 2
+        // i <= 3 (true)
+        // console.log(2);
+        // i++ (i = 3)
+
+        // Third Iteration
+        // i = 3
+        // i <= 3 (true)
+        // console.log(3);
+
+        // Fourth Iteration
+        // i = 4
+        // i <= 3 (false)
+        // Loop ends
+
+
+        // While Loops 
+        // while (condition) {
+        //     // code to be executed
+        // }   
+        
+        let i = 1;
+        while(i <=5){
+            console.log(i)
+            i++; // Increment i by 1 // 5 + 1 = 6 (Last iteration)
+        }
+
+        console.log("!-----------------!-----------------!");
+        let count = 5;
+        while (count > 0) {
+            console.log(count);
+            count--; // Decrement count by 1
+        }
+
+
+        console.log("!-----------------!-----------------!");
+        // Do ...while loop
+
+        let x = 5;
+        do {
+            console.log(x);
+            x--; // Decrement x by 1
+
+        } while(x > 5); // Condition checked after executing the loop body
+
+        console.log("!-----------------!-----------------!");
+        // let answer;
+        // do {
+        //     //answer = prompt("Do you agree? (Yes/ No)");
+        // } while(answer !== "yes"); 
+    </script>
+    
+</body>
+</html>

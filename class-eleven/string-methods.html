@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+
+    <script>
+        // String Methods
+        // String is a sequence of characters
+        // Strings are immutable (cannot be changed)
+        let text = "Hello, World!";
+        console.log(text.length); // Length of the string
+
+        if (text.length >= 20) {
+            console.log("The text is long.");
+        } else {
+            console.log("The text is short.");
+        }
+
+        // To Uppercase and To Lowercase
+        console.log(text.toUpperCase()); // Converts to uppercase
+        console.log(text.toLowerCase()); // Converts to lowercase
+
+        // ChatAt Index
+        console.log(text.charAt(0)); // Gets the character at index 0
+        console.log(text.charAt(7)); // Gets the character at index 7
+
+        // includes - Check if a substring exists
+        console.log(text.includes("World")); // true
+        console.log(text.includes("world")); // false (case-sensitive)
+
+        // slice - Extract a part of the string
+        console.log(text.slice(0, 5)); // "Hello"
+        console.log(text.slice(7, 12)); // "World"
+
+
+        // Replace and ReplaceAll
+        let newText = text.replace("World", "Everyone");
+        console.log(newText); // "Hello, Everyone!"
+        let anotherText = text.replaceAll("o", "0");
+        console.log(anotherText); // "Hell0, W0rld!"
+
+        // trim, trimstart, trimend
+        let spacedText = "   Hello, World!   ";
+        console.log(spacedText);
+        console.log(spacedText.trim()); // "Hello, World!" (removes spaces from both ends)
+        console.log(spacedText.trimStart()); // "Hello, World!   "
+        console.log(spacedText.trimEnd()); // "   Hello, World!" (removes spaces from the end)
+
+        // split - Split a string into an array
+        let csv = "apple,banana,orange";
+        let fruits = csv.split(","); // ["apple", "banana", "orange"]
+        console.log(fruits);
+
+    </script>
+    
+</body>
+</html>

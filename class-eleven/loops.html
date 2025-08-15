@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loops</title>
 </head>
+
 <body>
 
     <script>
@@ -20,8 +22,8 @@
         //     // code to be executed
         // }
 
-        for (let i = 1; i <= 10; i++){ 
-            if (i === 7){
+        for (let i = 1; i <= 10; i++) {
+            if (i === 7) {
                 console.log("Skipping 7");
                 continue; // Exits the loop when i is 3
             }
@@ -30,7 +32,7 @@
 
         console.log("!-----------------!-----------------!");
         // Program to skip even numbers
-        for (let y = 1; y <=10; y++) {
+        for (let y = 1; y <= 10; y++) {
             if (y % 2 === 0) {
                 continue; // Skip even numbers
             }
@@ -72,9 +74,9 @@
         // while (condition) {
         //     // code to be executed
         // }   
-        
+
         let i = 1;
-        while(i <=5){
+        while (i <= 5) {
             console.log(i)
             i++; // Increment i by 1 // 5 + 1 = 6 (Last iteration)
         }
@@ -95,14 +97,123 @@
             console.log(x);
             x--; // Decrement x by 1
 
-        } while(x > 5); // Condition checked after executing the loop body
+        } while (x > 5); // Condition checked after executing the loop body
 
         console.log("!-----------------!-----------------!");
         // let answer;
         // do {
         //     //answer = prompt("Do you agree? (Yes/ No)");
         // } while(answer !== "yes"); 
+
+        console.log("!-----------------!-----------------!");
+        // For in loop
+        // for (variable in object) {
+        //     // code to be executed
+        // }
+
+        let person = {
+            name: "John",
+            age: 30,
+            city: "Osun State",
+            occupation: "Software Developer",
+        }
+
+        // let name = "John";
+        // let city = "Osun State";
+        // // My name is John and I live in Osun State.
+
+        // console.log("My name is " + name + " and I live in " + city + ".");
+        // console.log(`My name is ${name} and I live in ${city} `);
+
+
+
+        for (let myObjectkey in person) {
+            let response = `${myObjectkey} -> ${person[myObjectkey]}`;
+            console.log(response);
+        }
+
+
+
+
+
+
+        let products = {
+            product1: {
+                name: "Laptop",
+                price: 1000
+            },
+            product2: {
+                name: "Smartphone",
+                price: 500
+            },
+            product3: {
+                name: "Tablet",
+                price: 300,
+            }
+        };
+
+        for (let productKey in products) {
+            let product = products[productKey];
+
+            let response = `We have ${product.name} and, it costs #${product.price}`;
+            console.log(response);
+        }
+
+        console.log("!-----------------!-----------------!");
+
+        let student = {
+            name: "John Doe",
+            scores: {
+                math: 85,
+                science: 90,
+                english: 88
+            }
+        }
+
+        console.log(student.name);
+        for (let score in student.scores) {
+            console.log(`${score} -> ${student.scores[score]}`);
+        }
+
+        // For .....of loop
+        // for (variable of iterable) {
+        //     // code to be executed
+        // }  
+        console.log("!-----------------!-----------------!");
+        let fruits = ["apple", "banana", "orange", "grape"];    
+        for (let fruit of fruits) {
+            console.log(fruit);
+        }  
+
+        let numbers = [1, 2, 3, 4, 5];
+        // Accessing the first element
+        let lastElement = numbers[0]; // Accessing the last element
+        let anotherLastElement = numbers.slice(-1)[0]; // Another way to access the last element
+        let anotherLastElement2 = numbers.at(-1); // Using the at() method to access the last element
+
+        console.log(`Another Last element: ${anotherLastElement}`); // Output: Last element:
+        for (let number of numbers) {
+            console.log(number);
+        }
+
+        console.log("!-----------------!-----------------!");
+        let word = "JavaScript";
+
+        for (let char of word) {
+            if(char === "a"){
+                console.log("Skipping 's'");
+                continue; // Skip the character 'a'
+            }
+            console.log(char);
+        }
+
+
+
+
+
+
     </script>
-    
+
 </body>
+
 </html>

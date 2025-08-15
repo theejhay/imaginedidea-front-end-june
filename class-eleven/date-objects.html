@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Objects</title>
+</head>
+<body>
+
+
+    <script>
+        // Date Objects
+        // Date object represents a single moment in time
+        let currentDate = new Date();
+        console.log(currentDate); // Current date and time
+        console.log(currentDate.getFullYear()); // Get the current year
+        console.log(currentDate.getMonth() + 1); // Get the current month 0-11
+        console.log(currentDate.getDate()); // Get the current day of the month
+        console.log(currentDate.getDay()); // Get the current day of the week (0-6, where 0 is Sunday)
+        console.log(currentDate.getHours()); // Get the current 0-23
+        console.log(currentDate.getMinutes()); // Get the current minutes
+        console.log(currentDate.getSeconds()); // Get the current seconds
+        console.log(currentDate.getMilliseconds()); // Get the current milliseconds
+
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        console.log(days[currentDate.getDay()])
+
+       
+
+    </script>
+    
+</body>
+</html>

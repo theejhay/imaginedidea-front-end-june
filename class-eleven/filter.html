@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+
+    <script>
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -2, -3, -4, -5];
+        let positiveNumbers = numbers.filter(number => number > 0);
+        console.log("Positive Numbers:", positiveNumbers);
+        //array.filter((item, index, array)){
+        //    return condition
+        //}
+
+        // for (number of numbers) {
+        //     if (number < 0) {
+        //         console.log(number);
+        //     }
+        // }
+
+        const students = [
+            { name: "John", age: 18, grade: "A" },
+            { name: "Jane", age: 17, grade: "B" },
+            { name: "Jim", age: 19, grade: "C" },
+            { name: "Jill", age: 16, grade: "A" }
+        ];
+
+        const filteredStudents = students.filter(student => student.age >= 18);
+        console.log("Filtered Students:", filteredStudents);
+
+        // Reduce, Map, Foreach, Every, Some, Find
+    </script>
+    
+</body>
+</html>

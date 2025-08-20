@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Object Methods</title>
+</head>
+
+<body>
+
+    <script>
+
+        function greetMe(name, age, city) {
+            console.log(`Hello ${name}, you are ${age} years old and live in ${city}.`);
+        }
+
+        greetMe("John", 30, "Osun State");
+        // Foreach Method
+        // array = [1,2,3,4,5];
+        // array.forEach((item, index, array) => {
+        //     if(item === 4) {
+        //        console.log("Found 4, skipping this item.");
+        //         return; // Exits the current iteration
+        //     }
+        //       console.log(`Item: ${item}, Index: ${index}`);
+
+
+        // });  
+
+        let students = ['John', 'Jane', 'Jim', 'Jill'];
+
+        students.forEach((student, index) => {
+            console.log(`Hi ${student}, Good Luck in your studies! You are student number ${index + 1}.`);
+        });
+
+
+        students.forEach(name => console.log("Hello " + name));
+
+        // Map Method
+        let numbers = [1, 2, 3, 4, 5];
+
+        let doubledNumbers = numbers.map((number, index) => number * 2);
+        console.log("Doubled Numbers:", doubledNumbers);
+
+        let pricesNaira = [1000, 2000, 3000];
+        let pricesUSD = pricesNaira.map(p => p / 1600); // [0.625, 1.25, 1.875]
+        console.log("Prices in USD:", pricesUSD);
+
+        const fruits = ["apple", "banana", "cherry"];
+        const listHTML = fruits.map((fruit) => {
+            console.log(`<li>${fruit}</li>`);
+        })
+
+
+        // for (let i = 1990; i <= 2025; i++) {
+        //     console.log(`<option value="${i}"> ${i} </option>`);
+        // }   
+
+        // const upperFruits = fruits.map(fruit => fruit.toLowerCase());
+        // console.log("Uppercase Fruits:", upperFruits);  
+
+        const items = [
+            {
+                name: "Apple Iphone 20",
+                price: 1200
+            },
+            {
+                name: "Tablet",
+                price: 89000
+            },
+            {
+                name: "Laptop",
+                price: 2500
+            }
+        ];
+    
+
+        const discountedItems = items.map((item) => {
+            return {
+                name: "Imagined Idea: " + item.name,
+                price: item.price * 0.5 // Assuming a 50% discount
+            };
+        });
+
+        console.log("Discounted Items:", discountedItems);
+
+
+        // Reduce Method
+        // The reduce method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+        // Syntax: array.reduce((accumulator, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
+
+        let sum = [1, 2, 3, 4, 5].reduce((accumulator, currentValue) => {
+            if (currentValue > accumulator){
+                return currentValue;
+            } else {
+                return accumulator;
+            }
+        }, 0); // Initial value is 0
+
+        // First Round: accumulator = 0, currentValue = 1
+        // Second Round: accumulator = 1, currentValue = 2
+        // Third Round: accumulator = 3, currentValue = 3
+        // Fourth Round: accumulator = 6, currentValue = 4
+        // Fifth Round: accumulator = 10, currentValue = 5
+        console.log("Sum of numbers:", sum); // Output: 15
+    </script>
+
+</body>
+
+</html>

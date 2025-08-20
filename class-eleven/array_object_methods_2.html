@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Object Methods</title>
+</head>
+
+<body>
+    <p> In here </p>
+    <hr />
+
+    <script>
+        // Every() Method
+        // Checks if all elements in an array pass a test
+        let numbers = [1, 2, 3, 4, 5, 9, -4, -8, -10];
+        let allPositive = numbers.every(num => num > 0);
+        console.log("All numbers are positive:", allPositive);
+
+    
+        // All students are Adult
+        const students = [
+            { name: "John", age: 18 },
+            { name: "Jane", age: 20 },
+            { name: "Jim", age: 19 },
+            { name: "Jill", age: 25 }
+        ];
+        const allAdults = students.every(student => student.age >= 18);
+        console.log("All students are adults:", allAdults);
+
+        // some method
+        // Checks if at least one element in an array passes a test
+        // is there a negative number in the array 
+        let hasNegative = numbers.some(num => num < 0);
+        console.log("Array has negative numbers:", hasNegative);
+
+        // Check if a shopping cart has milk
+        const shoppingCart = [
+            { name: "bread", price: 2 },
+            { name: "milk", price: 1.5 },
+            { name: "eggs", price: 3 }
+        ];
+
+        const hasMilk = shoppingCart.some(item => item.name === "milk");
+        // Check if the shopping cart has milk
+        // if it has milt, discount the total price by 10% using map 
+        // create a new array with the discounted prices
+        const discountedCart = shoppingCart.map(item => {
+            if (item.name === "milk") {
+                return {
+                     name: item.name, 
+                     price: item.price * 0.9 }; // Apply 10% discount
+            }
+            return item; // Keep other items unchanged
+        });
+        console.log("Discounted Shopping Cart:", discountedCart);   
+
+        // Find Method
+        // Finds the first element in an array that passes a test
+        let firstNegative = numbers.find(num => num < 0);
+        console.log("First negative number:", firstNegative);
+
+
+        let drivers = [
+            { name: "John", distance: 8 },
+            { name: "Jane", distance: 30 },
+            { name: "Jim", distance: 15 },
+            { name: "Jill", distance: 25 },
+            { name: "Jack", distance: 3 },
+            { name: "Jerry", distance: 2 }
+        ];
+
+        let nearestDriver = drivers.find(driver => driver.distance < 5);
+        console.log(nearestDriver);
+
+        let closestDriver = drivers.reduce((nearest, driver)=> {
+            return driver.distance < nearest.distance ? driver : nearest;
+        });
+
+        console.log("Closest Driver:", closestDriver);
+
+        // Sort method 
+        // Sorts the elements of an array in place and returns the sorted array
+        let unsortedNumbers = [5, 2, 8, 1, 4, 3];
+        console.log(unsortedNumbers.sort((a, b) => a - b)); // Ascending order
+        console.log(unsortedNumbers.sort((a, b) => b - a)); // Desc order
+
+
+        // Chaining Methods
+        // You can chain array methods together to perform multiple operations in a single line
+
+        let my_students = ["tomiwa", "simi", "paul", "pelumi", "james"];
+
+        // Filter names starting with 'p'
+        // capitalize the first letter
+        // sort alphabetically 
+
+        let result = my_students
+            .filter(name => name.startsWith("p")) // ['pelumi', 'paul']
+            .map(name => name[0].toUpperCase() + name.slice(1)) // ['Pelumi', 'Paul']
+            .sort(); // ['Paul', 'Pelumi']
+
+            console.log("Result:", result);
+           
+
+
+
+    </script>
+
+</body>
+
+</html>

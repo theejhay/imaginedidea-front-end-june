@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+
+    <script>
+        // SPread Operator 
+
+        const fruits = ["Apple", "Banana", "Cherry"];
+        const vegetables = ["Carrot", "Broccoli", "Spinach"];
+
+        const mergedArray = [...fruits, ...vegetables];
+        fruits[0] = "Mango"; // Changing the first element of fruits array
+        console.log("Merged Array:", mergedArray);
+
+        const moreFruits = [...fruits, "Orange", "Grapes"];
+        console.log("More Fruits:", moreFruits);
+
+
+        const user = {
+            name: "John",
+            age: 30,
+            city: "Osun State",
+            occupation: "Software Developer"
+        };
+
+        const updateduser = {
+            ...user,
+            age: 31, // Updating age
+            name: "Jane" // Changing name   
+        }
+
+        console.log("Updated User:", user);
+    </script>
+    
+</body>
+</html>

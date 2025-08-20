@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules</title>
+    <script type="module" src="./modules/app.js"></script>
+</head>
+<body>
+
+    <script>
+        // SOLID Principles
+        // S - Single Responsibility Principle
+        // O - Open/Closed Principle
+        // L - Liskov Substitution Principle
+        // I - Interface Segregation Principle
+        // D - Dependency Inversion Principle
+
+        //DRY - Don't Repeat Yourself
+        // KISS - Keep It Simple, Stupid
+        // YAGNI - You Aren't Gonna Need It
+
+
+        function greet (name, value_a, value_b) {
+            console.log(`Hello, ${name}!`);
+
+            // console.log(`The sum of ${value_a} and ${value_b} is: ${value_a + value_b}`);
+            // console.log(`The difference of ${value_a} and ${value_b} is: ${value_a - value_b}`);
+            // console.log(`The product of ${value_a} and ${value_b} is: ${value_a * value_b}`);
+            // console.log(`The quotient of ${value_a} and ${value_b} is: ${value_a / value_b}`);
+            // console.log(`The remainder of ${value_a} divided by ${value_b} is: ${value_a % value_b}`);
+            // console.log(`The power of ${value_a} raised to ${value_b} is: ${value_a ** value_b}`);
+            // console.log(`The square root of ${value_a} is: ${Math.sqrt(value_a)}`);
+            // console.log(`The square root of ${value_b} is: ${Math.sqrt(value_b)}`);
+        }
+
+        greet("John", 10, 5);
+
+        // For modules to work 
+        // We use the export and import keywords
+        // export - To export a function, variable, or class from a module
+        // import - To import a function, variable, or class from another module    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Function</title>
+</head>
+<body>
+
+    <script>
+        // Callback Function
+        // A function that is passed as an argument to another function
+ 
+        // syntax
+        // function doSomething(action) {
+        //     // code to do something
+        //     action(); // Call the callback function
+        // }
+
+        function tomiwaDinnerInvitation(name, myCallbackFunction ) {
+            console.log(`Hello, ${name}! You are invited to dinner.`);
+            myCallbackFunction(); // Call the callback function
+        }
+
+        function dinnerIsReady() {
+            console.log("Dinner is ready! Come and eat.");
+        }
+
+        tomiwaDinnerInvitation("Simi", dinnerIsReady);
+
+
+        // Ordering Food
+        function orderFood(food, callback) {
+            console.log(`Ordering ${food}...`);
+            setTimeout(() => {
+                console.log(food + " is ready!");
+                callback(); // Call the callback function after food is ready
+            }, 3000);
+        }
+
+        function callMeForPickup() {
+            console.log("Please come and pick up your food.");
+        }
+
+        orderFood("Pizza", callMeForPickup);
+
+        // SetTimeout Example
+        // setTimeout is used to execute a function after a specified delay
+        // setTimeout(function, delayInMilliseconds);
+        // function - The callback function you want to run after the delay
+        // delayInMilliseconds - The time to wait before executing the function
+
+        // console.log("Start");
+        // let name = "Tomiwa";
+        // setTimeout(() => {
+        //     console.log("Hello " +name+ " after 5 seconds");
+
+        // }, 5000); // Wait for 5 seconds before executing the callback function
+
+    </script>
+    
+</body>
+</html>

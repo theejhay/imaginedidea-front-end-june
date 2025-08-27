@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+    <style>
+        .countdown-wrapper {
+
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .countdown-wrapper p {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="countdown-wrapper">
+        <h2> Countdown Timer</h2>
+        <p id="timer"></p>
+    </div>
+
+
+    <script>
+        let timeLeft = 10;
+
+        let timerDisplay = document.getElementById("timer");
+
+        let countdown = setInterval(function () {
+            timerDisplay.textContent = timeLeft;
+            timeLeft--;
+
+            // Stop when it reaches zero 
+            if (timeLeft < 0) {
+                clearInterval(countdown);
+                timerDisplay.textContent = "Time's up!"
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

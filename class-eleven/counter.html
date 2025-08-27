@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #increase {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: 0;
+            cursor: pointer;
+        }
+
+        #decrease {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border: 0;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button id="increase" onclick="increaseMe()">Increase (+) </button>
+        <button id="decrease" onclick="decreaseMe()">Decrease (-) </button>
+
+        <h1 id="showCount">0</h1>
+    </div>
+
+    <script>
+        let counter = document.getElementById("showCount").textContent;
+
+        function increaseMe(){
+            counter++;
+            document.getElementById("showCount").textContent = counter;
+
+        }
+
+        function decreaseMe(){
+            counter--;
+            document.getElementById("showCount").textContent = counter;
+
+        }
+
+        // Classwork 
+        // Create a simple addition calculator
+        // Input the first number
+        // Input the second number 
+        // I want to click a button with (Add) that calls a function to do the math on click 
+        // i want to display the result above the first input 
+
+
+    </script>
+
+    
+</body>
+</html>

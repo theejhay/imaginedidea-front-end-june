@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/1da49350f2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <button id="myBtn"> Click Me</button>
+
+        <p id="para"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo itaque eos exercitationem omnis illo
+            aliquam accusamus sapiente, quod laboriosam quae magnam iste! Consectetur quis maiores expedita cumque ullam
+            temporibus at?</p>
+
+        <select id="select">
+            <option value="red"> Red</option>
+            <option value="blue"> Blue</option>
+        </select>
+
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="username">
+                <span class="input-group-text"><i style="color: red;" class="fa-solid fa-xmark"></i></span>
+                <span class="input-group-text"><i style="color: green;" class="fa-solid fa-check"></i></span>
+            </div>
+            
+            <div id="usernameHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+            <div id="passwordHelp" class="form-text"></div>
+        </div>
+        <button id="register" class="btn btn-primary">Submit</button>
+    </div>
+
+    <script>
+
+
+        let btn = document.getElementById("myBtn");
+
+        function message() {
+            console.log("Button clicked")
+        }
+
+        btn.addEventListener("click", message)
+
+        // For para
+        document.getElementById("para").addEventListener("mouseover", function () {
+            this.style.color = "blue";
+        })
+
+        // let person = {
+        //     name: "Taiwo",
+        //     greet: function() {
+        //         console.log("Hello, my name is " + this.name);
+        //     }
+        // }
+
+        // person.greet();
+
+        document.getElementById("select").addEventListener("change", function () {
+            console.log(this.value)
+        })
+
+
+        //Registration Form JS
+        // ====================
+        let usernameHelp = document.getElementById("usernameHelp");
+        let registerBtn = document.getElementById("register");
+        registerBtn.disabled = true;
+
+        document.getElementById("username").addEventListener("input", function(event) {
+            let username = event.target.value;
+            usernameHelp.textContent = "";
+
+            if( username.length <= 3 && username.length !== 0) {
+                usernameHelp.textContent = `Username is too short`;
+                usernameHelp.style.color = "red";
+                usernameHelp.style.fontStyle = "bold";
+            } else if( username.length > 3 && username.length !== 0) {
+                registerBtn.disabled = false;
+                usernameHelp.textContent = `Available`;
+                usernameHelp.style.color = "green";
+                usernameHelp.style.fontStyle = "bold";
+            }
+            
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

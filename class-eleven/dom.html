@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .heading {
+            text-align: center;
+            color: white;
+            background-color: blue;
+            padding: 10px;
+        }
+
+        .newtext {
+            text-align: center;
+            color: white;
+            background-color: purple;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 name="header" id="my_heading"> Welcome to DOM class!  </h1>
+    <span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Temporibus quis dolores totam eveniet necessitatibus odio sed a rem iste esse omnis ea quam vero doloribus, animi consectetur veritatis, est culpa.
+    </span>
+
+    <p class="text"> para 1</p>
+    <p class="text"> para 2</p>
+    <p class="text"> Para 3</p>
+
+    <div class="newText"> Div 1</div>
+    <div class="newText"> Div 2</div>
+
+    
+
+    <script>
+        // DOM MANIPULATION
+
+        // Document Object Model
+        // DOM is a programming interface for HTML and XML documents. It represents the page so that
+        // programs can change the document structure, style, and content. The DOM represents the document
+        // as nodes and objects. That way, programming languages can connect to the page.
+
+        // document.getElementById()
+        // document.getElementsByClassName()
+        // document.getElementsByTagName()
+        // document.querySelector()
+        // document.querySelectorAll()  
+
+        let heading = document.getElementById("my_heading");
+        heading.textContent = "Hello from JS";
+        // heading.style.backgroundColor = "black";
+        // heading.style.color = "white";
+        // heading.style.padding = "10px";
+        heading.classList.add("heading");
+        console.log(heading);
+
+
+        // document.getElementsByClassName()
+        // let paras = document.getElementsByTagName("p");
+        // console.log(paras.length); // HTMLCollection
+        // para[0].textContent = "Hello para 1";
+        // para[1].textContent = "Hello para 2";
+
+        // let newPara = document.createElement("p");
+        // newPara.textContent = "Hello para 4";
+        // document.body.appendChild(newPara);
+
+        // console.log(paras.length); // HTMLCollection
+
+
+        // para[0].style.color = "red";
+        // para[1].style.color = "red";
+
+        let para = document.getElementsByClassName("text");
+
+        for (let i = 0; i < para.length; i++){
+            para[i].style.color = "white";
+            para[i].style.backgroundColor = "green";
+            para[i].style.padding = "10px";
+        }
+
+
+        //console.log(para.length);
+
+        // Query Selector
+        
+        // live vs static
+        // live - HTMLCollection - it updates automatically when there is a change in DOM
+
+    
+        // static - NodeList  - it does not update automatically when there is a change in DOM
+        
+        // let divs = document.querySelectorAll("div");
+        // // console.log(divs.length); // NodeList
+
+        // let newDiv = document.createElement("div");
+        // newDiv.textContent = "Div 3";
+        // document.body.appendChild(newDiv);
+        // console.log(divs.length); // NodeList
+
+
+        let div = document.querySelector(".newText");
+        div.textContent = "Hello Div";
+        // div.style.color = "white";
+        // div.style.backgroundColor = "purple";
+        // div.style.padding = "10px";
+        //div.classList.add("newtext");
+
+        let divs = document.querySelectorAll(".newText");
+        console.log(divs.length); // NodeList
+        divs.forEach(function(elem){
+            // elem.style.color = "white";
+            // elem.style.backgroundColor = "purple";
+            // elem.style.padding = "10px";
+            // elem.style.marginBottom = "5px";
+            elem.classList.add("newtext");
+        });
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

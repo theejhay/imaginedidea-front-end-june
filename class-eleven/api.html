@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+
+    <script>
+        // APi VERBS
+        // HTTP Methods 
+        // GET - Used to retrieve Information from server
+        // POST - Used to send data to the server
+        // PUT - Update the entire data - Replaces whole record with new data
+        // PATCH - Update partial data i.e updates just one field instead of replacing everything
+        // DELETE - Deletes something from the server
+
+        // person = { name: "John", age: 35, country: "UK"}
+
+
+        // FETCH 
+        // Returns Promise - .then() or async/await the result 
+
+        // fetch("https://fakestoreapi.com/users")
+        //     .then(response => response.json()) // convert response to json
+        //     .then(data => console.log(data));
+
+        // USING AYNC AWAIT
+        async function getUsers() {
+            try {
+                let response = await fetch("https://fakestoreapi.com/users");
+                let users = await response.json();
+                console.log(users);
+                
+            } catch (error) {
+                console.log("Error Fetching Users: ", error.message);
+            }
+        }
+
+        getUsers();
+
+    </script>
+    
+</body>
+</html>

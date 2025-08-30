@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring </title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            name: "Alice",
+            age: 31,
+            address: {
+                city: "Liverpool",
+                country: "UK"
+            }
+        }
+
+        let name, city;
+
+        ({ name, address: { city, country } } = person)
+
+        // let name = person.name;
+        // let age = person.age;
+        // let country = person.country;
+
+        //let {name, age, address: {city, country}} = person;
+
+        console.log(name, city, country);
+
+        let user = {
+            id: 101,
+            username: "Bob"
+        }
+
+        // let userId = user.id;
+        // let userName = user.username;
+
+        let { id: userId, username: userName } = user;
+
+        console.log(userId, userName);
+
+        const product = {
+            title: "Laptop",
+            specs: {
+                cpu: "Intel i7",
+                ram: "32GB"
+            }
+        };
+
+        let title, cpu;
+
+        ({ title, specs: { cpu } } = product);
+        console.log(title, cpu)
+        // Destruct without using let or const and I want to see the title and cpu  "Laptop Intel i7"
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

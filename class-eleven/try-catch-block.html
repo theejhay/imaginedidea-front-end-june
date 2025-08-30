@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try...Catch Block</title>
+</head>
+
+<body>
+
+    <script>
+        try {
+            console.log(x);
+        } catch (error) {
+            console.log("Something went Wrong: ", error.message);
+        } finally {
+            console.log("This will always run");
+        }
+
+        console.log("Program continues running....")
+
+        let data = '{"name": "Alice"}';
+
+        try {
+            let user = JSON.parse(data);
+            console.log(user.name);
+
+        } catch (error){
+            console.log("0ps! Could not parse JSON:", error.message)
+
+        }
+    </script>
+
+</body>
+
+</html>
